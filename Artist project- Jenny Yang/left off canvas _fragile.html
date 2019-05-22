@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+      charset="UTF-8"
+      lang="en"
+    />
+    <title>Fragile_</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo+Black"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="upnav">
+      <a href="javascript:void(0)" class="menu-close" onclick="menuClose()"
+        >&times;</a
+      >
+      <ul class="menu">
+        <li><a href="about.html">about</a></li>
+        <li><a href="fragile.html">fragile</a></li>
+        <li><a href="blind.html">blind</a></li>
+        <li><a href="newspace.html">newspace</a></li>
+      </ul>
+    </div>
+
+    <div class="wrapper">
+      <div id="header">
+        <span
+          class="menu-open"
+          aria-label="open menu"
+          style="font-style:30px;color:red;cursor:pointer"
+          onclick="menuOpen()"
+          >&#9776;</span
+        >
+
+        <a class="main_link" href="index.html">
+          <span class="brand_title">Jenny Yang</span>
+        </a>
+      </div>
+
+      <main>
+        <video
+          controls
+          class="video"
+          width="100%"
+          height="auto"
+          loop
+          preload="none"
+        >
+          <source src="FRAGILE AW18.mp4" type="video/mp4" />
+        </video>
+      </main>
+
+      <h2>Fragile</h2>
+      <p>2017, Art directed by Jenny Yang, textile by Didi Chavisa</p>
+
+      <div class="image-gallery">
+        <div>
+          <img src="images/fragilecoat_front.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/fragilecoat_back.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/raincoat_front.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/raincoat_back.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/bomber_front.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/bomber_back.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/pinktshirt_front.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/pinktshirt_back.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/shortgilet_front.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/shortgilet_back.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/longgilet_front.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/longgilet_back.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/pinkhoodie_front.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/pinkhoodie_back.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/blue tunic.jpg" id="images" />
+        </div>
+
+        <div>
+          <img src="images/fragilecoat_detail.jpg" id="images" />
+        </div>
+
+        <div>
+          <img
+            class="pinktshirt-detail"
+            src="images/pinktshirt_detail.jpg"
+            id="images"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<style>
+  body {
+    margin: 0;
+
+    background-color: black;
+    font-family: "Archivo Black", sans-serif;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: red;
+    text-align: justify;
+    font-size: 30px;
+  }
+
+  p {
+    color: grey;
+  }
+  /* image gallery */
+  #images {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  .image-gallery {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: 500px;
+    justify-content: center;
+    grid-gap: 10px;
+  }
+
+  .pinkshirt-detail {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 2;
+  }
+
+  /*off canvas*/
+  .menu {
+    margin-top: 100px;
+    list-style: none;
+  }
+
+  .upnav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: red;
+    color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: black;
+    font-size: 45px;
+    display: block;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    transition: 0.3x;
+  }
+
+  .main_link {
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+  }
+
+  .upnav .menu-close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 95px;
+    margin-left: 50px;
+  }
+
+  .wrapper {
+    transition: margin-left 0.5s;
+    padding: 16px;
+  }
+
+  .menu-open {
+    font-size: 35px;
+  }
+
+  .menu-close {
+    text-decoration: none;
+    color: black;
+  }
+
+  #header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  @media only screen (min-width: 320px) and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .imgae-gallery {
+      display: grid;
+      grid-template-areas: "one columns";
+      grid-template-columns: 1fr;
+      grid-template-rows: 400px;
+      justify-content: center;
+    }
+
+    .upnav {
+      height: 0;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding-top: 0px;
+      overflow-y: hidden;
+    }
+    .menu {
+      text-align: center;
+    }
+
+    .wrapper {
+      transition: margin-top 0.5s;
+    }
+
+    .menu a {
+      font-size: 25px;
+      text-transform: uppercase;
+    }
+
+    #header {
+      display: none;
+    }
+  }
+</style>
+<script>
+  const offCanvas = document.querySelector("upnav");
+  const phoneSc = window.matchMedia("max-width:480");
+  const openBtn = document.querySelector(".menu-open");
+  const closeBtn = document.querySelector(".menu-close");
+
+  function menuOpen() {
+    document.querySelector(".upnav").style.width = "400px";
+    document.querySelector(".wrapper").style.marginLeft = "400px";
+  }
+
+  function menuClose() {
+    document.querySelector(".upnav").style.width = "0";
+    document.querySelector(".wrapper").style.marginLeft = "0";
+  }
+
+  if (phoneSc.matches) {
+    openBtn.addEventListener("click", () => {
+      offCanvas.style.height = "370px";
+      document.querySelector(".wrapper").style.marginTop = "370px";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      offCanvas.style.height = "0";
+      document.querySelector(".wrapper").style.marginTop = "0";
+    });
+  }
+</script>

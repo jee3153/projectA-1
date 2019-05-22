@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,
+  initial-scale=1.0"
+      charset="UTF-8"
+      lang="en"
+    />
+    <title>Fragile_</title>
+  </head>
+
+  <body>
+    <video playsinline autoplay muted loop id="myVideo">
+      <source src="FRAGILE AW18.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+
+    <section class="landing">
+      <a href="index.html" class="link_main">Jenny Yang</a>
+      <a href="designerportfolio.html" class="link_archive">Archive</a>
+      <a href="about.html" class="link_about">About</a>
+      <a href="fragile.html" class="link_collection">Collection</a>
+
+      <!-- 
+     <div class="logo-container">
+        <div class="logos">
+          <div class="fragile_link">
+            <a href="fragile.html">
+              <img src="fragile1_link.jpg" />
+            </a>
+          </div>
+          <div class="blind_link">
+            <a href="blind.html">
+              <img src="blind_link.jpg" />
+            </a>
+          </div>
+          <div class="newspace_link">
+            <a href="newspace.html">
+              <img src="newspace_link.jpg" />
+            </a>
+          </div>
+        </div>
+      </div>
+    --></section>
+    <footer></footer>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Archivo+Black");
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        font-family: "Archivo Black", sans-serif;
+        margin-top: 200px;
+        margin: 0;
+        background: black;
+      }
+
+      img {
+        opacity: 0.5;
+        width: 13rem;
+        height: auto;
+        margin-top: 40px;
+      }
+      video {
+        width: 100%;
+        height: auto;
+      }
+      h1 {
+        text-transform: uppercase;
+        font-size: 30px;
+        text-align: center;
+      }
+      .link_main {
+        margin: auto;
+      }
+
+      a {
+        outline: none;
+        text-decoration: none;
+        color: #f1f1f1;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      nav {
+        text-transform: uppercase;
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        position: relative;
+        padding: 0px 0.55rem 80px 0.55rem;
+      }
+
+      section.landing {
+        display: block;
+        height: auto;
+        /*min-height: 450px;*/
+        padding: 100px 0.55rem 80px 0.55rem;
+        position: relative;
+        text-align: right;
+        width: 100%;
+      }
+      .link_about {
+        font-size: 20px;
+      }
+      .link_collection {
+        font-size: 50px;
+      }
+      #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -100;
+      }
+      .link_archive {
+        font-size: 100px;
+      }
+
+      span {
+        display: flex;
+        position: relative;
+        margin-left: auto;
+        /* border: 1px solid red;*/
+      }
+      span a {
+        justify-content: flex-end;
+        margin: auto;
+      }
+      @media only screen and (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+        .link_archive {
+          font-size: 65px;
+        }
+        .link_collection {
+          font-size: 45px;
+        }
+      }
+    </style>
+  </body>
+</html>

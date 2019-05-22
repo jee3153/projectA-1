@@ -1,0 +1,134 @@
+body {
+  color: black;
+  background-color: white;
+  list-style: none;
+  font-family: "Archivo Black", "Open Sans Condensed", sans-serif;
+  margin-top: 200px;
+  overflow-x: hidden;
+}
+/* off canvas top */
+.top-off-canvas {
+  background-color: rgba(10, 10, 10);
+  width: 100%;
+  height: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow-y: hidden;
+  transform: translateY(80px);
+  transition: 0.5s;
+  padding-top: 0px;
+  text-align: center;
+}
+.menu {
+  margin-top: 100px;
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.menu a {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.menu a:hover {
+  color: #f7f3cf;
+}
+.menu-close {
+  position: absolute;
+  color: #ffffff;
+  top: 0;
+  right: 20px;
+  font-size: 70px;
+}
+
+.menu-close:hover {
+  color: #f7f3cf;
+}
+/* sticky header */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sticky-header {
+  background: white;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  z-index: 99;
+  padding-top: 0px;
+}
+
+.menu-toggler {
+  position: relative;
+  width: 2.6em;
+  height: 2.6em;
+}
+
+.dropdown_hover {
+  display: inline-block;
+  padding: 7px;
+  background: white;
+  color: #323b40;
+  cursor: pointer;
+  border: none;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main_link {
+  font-size: 30px;
+  color: rgba(10, 10, 10);
+}
+
+h1 img {
+  display: block;
+  height: auto;
+  padding: 10px 0.55rem 80px 0.55rem;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+p {
+  color: darkgrey;
+  text-align: center;
+  font-family: "Open Sans Condensed";
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+#images,
+.main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-gallery {
+  position: relative;
+  display: block;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) and (-webkit-min-pixel-ratio: 2) and (orientation: portrait) {
+  .main_link {
+    font-size: 27px;
+  }
+}

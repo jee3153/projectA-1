@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" lang="en" />
+    <title>Newspace_</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo+Black"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="links">
+      <a href="index.html" class="link_main">Jenny Yang</a>
+      <a href="designerportfolio.html" class="link_archive">Archive</a>
+    </div>
+
+    <section class="slidershow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1/5</div>
+        <img
+          id="image"
+          src="cleaning project photoshoot-1.jpg"
+          style="width:100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2/5</div>
+        <img
+          id="image"
+          src="cleaning project photoshoot-2.jpg"
+          style="width:100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3/5</div>
+        <img
+          id="image"
+          src="cleaning project photoshoot-3.jpg"
+          style="width:100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4/5</div>
+        <img
+          id="image"
+          src="cleaning project photoshoot-4.jpg"
+          style="width:100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5/5</div>
+        <img
+          id="image"
+          src="cleaning project photoshoot-5.jpg"
+          style="width:100%"
+        />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+    <br />
+
+    <div class="dots" style="text-align_center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+  </body>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Archivo+Black");
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      font-family: "Archivo Black", sans-serif;
+      margin-top: 200px;
+      margin: 0;
+    }
+
+    a {
+      outline: none;
+      text-decoration: none;
+      color: black;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+    .links {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+    .link_main {
+    }
+    .link_archive {
+      font-size: 40px;
+    }
+    /* Slideshow container*/
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    /* Position the 'next button' to right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .image-gallery {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    section a:hover {
+      color: red;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    a:hover {
+      color: red;
+    }
+    /* number text */
+    .numbertext {
+      color: dimgray;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 40px;
+    }
+
+    /* The dots/bullets/indicators */
+    .dots {
+      margin-left: auto;
+      margin-right: auto;
+      width: 8em;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6 ease;
+      text-align: center;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev,
+      .next {
+        font-size: 11px;
+      }
+    }
+  </style>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</html>
